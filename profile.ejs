@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../public/css/profile.css" />
+</head>
+
+<body>
+    <!--Insert navbar into top of profile page-->
+    <%-include('partials/nav.ejs')%>
+        <h1>Profile</h1>
+        <div class="cardContainer">
+            <div class="card">
+                <div class="cardHeader">
+                    <h2>Profile</h2>
+                </div>
+                <img src="<%=user.image%>" alt="Logo" />
+                <div class="cardBody">
+                    <p><strong>Full Name:</strong>
+                        <%=user.fullName%>
+                    </p>
+                    <p><strong>Username:</strong>
+                        <%=user.username%>
+                    </p>
+                    
+                </div>
+                <!--Logout-->
+                <div class="cardFooter">
+                    <a href="/logout">Logout</a>
+                </div>
+            </div>
+
+        </div>
+</body>
+
+</html>
